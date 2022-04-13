@@ -4,7 +4,9 @@ Short-term Forest Change Tool
 
 Last update: April 3, 2020
 Created by: NASA DEVELOP Spring 2020 Costa Rica and Panama Ecological Forecasting Project Team: Teodora Mitroi, Kate Markham, Eder Hernandez, Sharifa Karwandyar
+
 Contact: Teodora Mitroi, mitteodora@gmail.com
+
 The script was developed using Google Earth Engine (GEE). It uses Landsat 8 
 OLI TOA Reflectance with maskL8sr cloud-mask, Sentinel MSI Level-1C with 
 maskS2cloud cloud-mask, and Terra Moderate Resolution Imaging 
