@@ -90,7 +90,7 @@
 
 //-------------------------Notes about date limitations---------------------///
 // Landsat 8 OLI data only goes as far back as April 11, 2013.
-// Sentinel 2 data only goes as far back as May 23, 2015.
+// Sentinel 2 data only goes as far back as June 23, 2015.
 // Terra MODIS Vegetation Indices only go as far back as July 4th, 2002.
 
 
@@ -104,7 +104,7 @@
 //outside of the park in Costa Rica. 
 
 //Change path name so that it directs to a shapefile of the study area
-var studyArea = ee.FeatureCollection('users/katherinemarkham/CRP_StudyArea');
+var studyArea = ee.FeatureCollection("users/DEVELOP_Geoinformatics/NASA_DEVELOP_Codes/NASA_DEVELOP_Spring2020/GA_CostaRicaPanamaEcoII_STFC/CRP_StudyArea");
 
 
 //-----------------------Enter Regions for Analysis--------------------------///
@@ -112,7 +112,7 @@ var studyArea = ee.FeatureCollection('users/katherinemarkham/CRP_StudyArea');
 //contains regions within the study area. These are the regions for
 //which statistics are calculated and exported as tables. Tables will appear
 //on the right under the "Tasks" bar.
-var Regions = ee.FeatureCollection('users/katherinemarkham/StudyAreaRegions');
+var Regions = ee.FeatureCollection("users/DEVELOP_Geoinformatics/NASA_DEVELOP_Codes/NASA_DEVELOP_Spring2020/GA_CostaRicaPanamaEcoII_STFC/StudyAreaRegions");
 
 //------------------Enter Regions for Exporting Sentinel Imagery-------------///
 //Regions for Sentinel Export
@@ -124,10 +124,10 @@ var Regions = ee.FeatureCollection('users/katherinemarkham/StudyAreaRegions');
 //Note: If you want to export the composite Landsat-Sentinel imagery,
 //this is at 30m and you do not need to export by region.
 
-var Region1= ee.FeatureCollection('users/katherinemarkham/LaAmistadPanama');
-var Region2= ee.FeatureCollection('users/katherinemarkham/LaAmistadCaribe');
-var Region3= ee.FeatureCollection('users/katherinemarkham/LaAmistadPacifico');
-var Region4= ee.FeatureCollection('users/katherinemarkham/Osa');
+var Region1= ee.FeatureCollection('users/DEVELOP_Geoinformatics/NASA_DEVELOP_Codes/NASA_DEVELOP_Spring2020/GA_CostaRicaPanamaEcoII_STFC/LaAmistadPanama');
+var Region2= ee.FeatureCollection('users/DEVELOP_Geoinformatics/NASA_DEVELOP_Codes/NASA_DEVELOP_Spring2020/GA_CostaRicaPanamaEcoII_STFC/LaAmistadCaribe');
+var Region3= ee.FeatureCollection('users/DEVELOP_Geoinformatics/NASA_DEVELOP_Codes/NASA_DEVELOP_Spring2020/GA_CostaRicaPanamaEcoII_STFC/LaAmistadPacifico');
+var Region4= ee.FeatureCollection('users/DEVELOP_Geoinformatics/NASA_DEVELOP_Codes/NASA_DEVELOP_Spring2020/GA_CostaRicaPanamaEcoII_STFC/Osa');
 
 //-------------------------Enter Dates of Choice-----------------------------///
 //Format must use "-" and a two digit number
@@ -135,19 +135,19 @@ var Region4= ee.FeatureCollection('users/katherinemarkham/Osa');
 
 //Define date range for earlier image collection. 
 //Leave "-" in the variable name.
-var startmonth = '-06';
+var startmonth = '-08';
 var startday = '-01';
-var endmonth = '-08';
+var endmonth = '-12';
 var endday = '-31';
 
 // List year to be analyzed for earlier image
 var yearList = {
-'2015': 2015
+'2016': 2016
 };
 
 // Define date range for second(later) image collection
 //Leave "-" in the variable name.
-var Laterstartmonth = '-10';
+var Laterstartmonth = '-08';
 var Laterstartday = '-01';
 var Laterendmonth = '-12';
 var Laterendday = '-31';
